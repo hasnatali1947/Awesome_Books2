@@ -1,0 +1,268 @@
+.ListSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 70px;
+    font-family: var(--font-family-styled);
+    opacity: 0.7;
+    animation: text-loads 1.5s ease-in-out;
+}
+
+.mobTitle,
+.mobAuthor {
+    display: none !important;
+}
+
+.TitlendAuthor {
+    display: flex;
+}
+
+.listContainer {
+    box-shadow: var(--Box-shadow-outside);
+    width: 90%;
+    padding: 20px;
+}
+
+.listContainer span {
+    display: flex;
+    margin-bottom: 10px;
+    text-align: start;
+    align-items: center;
+    font-weight: 700;
+    margin-left: 15px;
+}
+
+.listBtnDiv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 30px;
+}
+
+.RemoveButton {
+    background-color: #ff5c5c;
+    box-shadow: 0 0 10px #ff5c5c;
+}
+
+.Edit {
+    background-color: rgb(87, 255, 35);
+    box-shadow: 0 0 10px rgba(86, 255, 35, 0.811);
+}
+
+.list {
+    max-height: 50vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.listItem {
+    width: calc(100% - 40px);
+    padding: 5px 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.486);
+    margin: 10px 0;
+    border-radius: 7px;
+}
+
+.listItem span {
+    font-weight: 400;
+}
+
+.listContainer span p:nth-child(1) {
+    width: 400px;
+}
+
+.editInputs {
+    display: flex;
+    gap: 30px;
+    height: 0px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.editInputs input {
+    border: none;
+    background-color: rgba(179, 171, 171, 0.192);
+    padding: 1px;
+}
+
+.listContainer .editInputs input:nth-child(1) {
+    width: 350px;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 50px;
+        font-family: var(--font-family-styled);
+        opacity: 0.7;
+        animation: text-loads 1.5s ease-in-out;
+    }
+
+    .listContainer span p:nth-child(1) {
+        width: 200px;
+    }
+
+    .listContainer .editInputs input:nth-child(1) {
+        width: 160px;
+    }
+
+    .contactContainer ul {
+        margin-top: 20px;
+        list-style: none;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.524);
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 551px) {
+    h2 {
+        margin-bottom: 30px;
+        font-size: 38px;
+    }
+
+    .listItem {
+        width: 95%;
+        padding: 15px 5px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: rgba(255, 255, 255, 0.486);
+        margin: 10px 0;
+        border-radius: 7px;
+    }
+
+    .editInputs {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: baseline;
+        height: 100%;
+    }
+
+    .listContainer .editInputs input:nth-child(1) {
+        width: 200px;
+    }
+
+    button {
+        padding: 4px 5px;
+        border-radius: 7px;
+        border: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .TitlendAuthor {
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+    }
+
+
+    .mobTitle,
+    .mobAuthor {
+        display: flex !important;
+    }
+
+    .TitleAuthorHeading p {
+        display: none;
+    }
+
+    .listBtnDiv {
+        display: flex;
+        gap: 20px;
+    }
+
+    .title,
+    .author {
+        display: flex;
+        gap: 10px;
+    }
+
+    @media (max-width: 370px) {
+
+        h2 {
+            margin-top: 10vh;
+            margin-bottom: 30px;
+            font-size: 35px;
+        }
+
+        .TitlendAuthor {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobTitle,
+        .mobAuthor {
+            display: flex !important;
+        }
+
+
+        .TitleAuthorHeading p {
+            display: none;
+        }
+
+        .listContainer {
+            box-shadow: var(--Box-shadow-outside);
+            width: 86%;
+            display: flex;
+            padding: 20px;
+            align-items: baseline;
+        }
+
+        .listContainer span {
+            display: flex;
+            margin-bottom: 10px;
+            text-align: start;
+            align-items: start;
+            gap: 10px;
+            font-weight: 600;
+            flex-direction: column;
+        }
+
+        .listItem {
+            width: 95%;
+            padding: 15px 5px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background-color: rgba(255, 255, 255, 0.486);
+            margin: 10px 0;
+            border-radius: 7px;
+        }
+
+        .listBtnDiv {
+            display: flex;
+            gap: 20px;
+        }
+
+        .title,
+        .author {
+            display: flex;
+            gap: 10px;
+        }
+
+        .contactContainer ul {
+            margin-top: 20px;
+            list-style: none;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.524);
+            font-size: 12px;
+        }
+    }
+}
